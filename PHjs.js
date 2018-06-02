@@ -11,9 +11,23 @@ function getVal(id) {
 
 //Function to reverse a string. Paramaters -> string to be reversed (Ex. reverse('cat'); -> Returns 'tac')
 function reverse(str) {
-try {
+  try {
     return str.split("").reverse().join("");
   } catch(e) {
     console.log("Error -> " + e);
+  }
+}
+
+//Function to generate a random number between two values. Paramaters -> min, max (Ex. genRanNum(10, 100); -> Returns a value between 10 and 100)
+function genRanNum(min, max) {
+  if (typeof min != 'number') {
+    return 'Invalid Type'; 
+  } else {
+    let x = Math.floor(Math.random() * max);
+    if (x < min) {
+      return x + min; 
+    } else {
+      return x; 
+    }
   }
 }
