@@ -26,7 +26,7 @@ const PH = {
     } else {
       let x = Math.floor(Math.random() * max);
       if (x < min) {
-        return x + min - max; 
+        return x + max - min; 
       } else {
         return x; 
       }
