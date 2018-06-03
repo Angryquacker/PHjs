@@ -24,12 +24,7 @@ const PH = {
     if (typeof min != 'number') {
       return 'Invalid Type'; 
     } else {
-      let x = Math.floor(Math.random() * max);
-      if (x < min) {
-        return x + max - min; 
-      } else {
-        return x; 
-      }
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
   }
   
