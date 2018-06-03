@@ -21,8 +21,8 @@ const PH = {
   
   //Function to generate a random number between two values. Paramaters -> min, max (Ex. genRanNum(10, 100); -> Returns a value between 10 and 100)
   genRanNum: function(min, max) {
-    if (typeof min != 'number') {
-      return 'Invalid Type'; 
+    if (typeof min != 'number' || min > max) {
+      return 'Invalid Inputs'; 
     } else {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
