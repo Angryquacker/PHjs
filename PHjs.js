@@ -1,33 +1,36 @@
 //Offical PHjs Library
 
-//Function to get value of an input field. Paramaters -> input id (Ex. getVal('user'); -> Returns the value of the user field)
-function getVal(id) {
-  try {
-    return document.getElementById(id).value;
-  } catch(e) {
-    console.log("Error -> " + e);
-  }
-}
-
-//Function to reverse a string. Paramaters -> string to be reversed (Ex. reverse('cat'); -> Returns 'tac')
-function reverse(str) {
-  try {
-    return str.split("").reverse().join("");
-  } catch(e) {
-    console.log("Error -> " + e);
-  }
-}
-
-//Function to generate a random number between two values. Paramaters -> min, max (Ex. genRanNum(10, 100); -> Returns a value between 10 and 100)
-function genRanNum(min, max) {
-  if (typeof min != 'number') {
-    return 'Invalid Type'; 
-  } else {
-    let x = Math.floor(Math.random() * max);
-    if (x < min) {
-      return x + min; 
+const PH = {
+  //Function to get value of an input field. Paramaters -> input id (Ex. getVal('user'); -> Returns the value of the user field)
+  getVal: function(id) {
+    try {
+      return document.getElementById(id).value;
+    } catch(e) {
+      console.log("Error -> " + e);
+    }
+  },
+  
+  //Function to reverse a string. Paramaters -> string to be reversed (Ex. reverse('cat'); -> Returns 'tac')
+  reverse: function(str) {
+    try {
+      return str.split("").reverse().join("");
+    } catch(e) {
+      console.log("Error -> " + e);
+    }
+  },
+  
+  //Function to generate a random number between two values. Paramaters -> min, max (Ex. genRanNum(10, 100); -> Returns a value between 10 and 100)
+  genRanNum: function(min, max) {
+    if (typeof min != 'number') {
+      return 'Invalid Type'; 
     } else {
-      return x; 
+      let x = Math.floor(Math.random() * max);
+      if (x < min) {
+        return x + min; 
+      } else {
+        return x; 
+      }
     }
   }
-}
+  
+};
