@@ -12,10 +12,10 @@ const PH = {
   
   //Function to reverse a string. Paramaters -> string to be reversed (Ex. reverse('cat'); -> Returns 'tac')
   reverse: function(str) {
-    try {
+    if (typeof str == 'string') {
       return str.split("").reverse().join("");
-    } catch(e) {
-      console.log("Error -> " + e);
+    } else {
+      return 'Invalid Type';
     }
   },
   
