@@ -28,13 +28,21 @@ const PH = {
     }
   },
   
-  getEl: function(id) {
+  getEl: function(name) {
     try {
-      return document.getElementById(id);
+      let half = name.split("");
+      realName.shift();
+      let full = half.join("");
+      let pre = name.split("").shift();
+      if (pre == '.') {
+        return document.getElementsByClassName(full);
+      } 
+      else if (pre == '#') {
+         return document.getElementById(full);
+      }
     } catch(e) {
       console.log("Error -> " + e); 
     }
   },
-  
   
 };
