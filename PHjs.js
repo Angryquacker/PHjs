@@ -31,14 +31,14 @@ const PH = {
   getEl: function(name) {
     try {
       let half = name.split("");
-      realName.shift();
+      half.shift();
       let full = half.join("");
       let pre = name.split("").shift();
       if (pre == '.') {
         return document.getElementsByClassName(full);
       } 
       else if (pre == '#') {
-         return document.getElementById(full);
+        return document.getElementById(full);
       }
     } catch(e) {
       console.log("Error -> " + e); 
