@@ -26,6 +26,15 @@ const PH = {
     } else {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-  }
+  },
+  
+  getEl: function(id) {
+    try {
+      return document.getElementById(id);
+    } catch(e) {
+      console.log("Error -> " + e); 
+    }
+  },
+  
   
 };
