@@ -30,11 +30,7 @@ const PH = {
   
   //Function to reverse a string. Paramaters -> string to be reversed (Ex. reverse('cat'); -> Returns 'tac')
   reverse: function(str) {
-    if (typeof str == 'string') {
       return str.split("").reverse().join("");
-    } else {
-      return 'Invalid Type';
-    }
   },
   
   //Function to generate a random number between two values. Paramaters -> min, max (Ex. genRanNum(10, 100); -> Returns a value between 10 and 100)
